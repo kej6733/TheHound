@@ -41,73 +41,59 @@
       ],
     })
   }
-  
-  <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
-    />
-    <title>
-      Kakao Talk Channel Create Add Button Demo - Kakao JavaScript SDK
-    </title>
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  </head>
-  <body>
-    <div id="kakao-talk-channel-add-button"></div>
-    <script type="text/javascript">
-      // 사용할 앱의 JavaScript 키를 설정해 주세요.
-      Kakao.init('d293e7c48ee957d8481d52abb52d84f1');
-      // 채널 추가하기 버튼을 생성합니다.
-      Kakao.Channel.createAddChannelButton({
-        container: '#kakao-talk-channel-add-button',
-        channelPublicId: '_xcxbCyb',
-        size: 'small',
-        supportMultipleDensities: true,
-      });
-    </script>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
-    />
-    <title>
-      Kakao Talk Channel Create Chat Button Demo - Kakao JavaScript SDK
-    </title>
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  </head>
-  <body>
-    <div id="kakao-talk-channel-chat-button"></div>
-    <script type="text/javascript">
-      // 사용할 앱의 JavaScript 키를 설정해 주세요.
-      Kakao.init('d293e7c48ee957d8481d52abb52d84f1');
-      // 채널 1:1 채팅 버튼을 생성합니다.
-      Kakao.Channel.createChatButton({
-        container: '#kakao-talk-channel-chat-button',
-        channelPublicId: '_xcxbCyb',
-        title: 'consult',
-        size: 'small',
-        color: 'yellow',
-        shape: 'mobile',
-        supportMultipleDensities: true,
-      });
-    </script>
-  </body>
-</html>
-
-  
+    
 </script>
 <!-- https://hwadamrealestate.modoo.at -->
 <!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
   </body>
 </html>
+
+<script>
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createAddChannelButton({
+      container: '#kakao-talk-channel-add-button',
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
+</script>
+
+<div
+  id="kakao-talk-channel-add-button"
+  data-channel-public-id="_xcxbCyb"
+  data-size="small"
+  data-support-multiple-densities="true"
+></div>
+
+<script>
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
+</script>
+
+<div
+  id="kakao-talk-channel-chat-button"
+  data-channel-public-id="_xcxbCyb"
+  data-title="consult"
+  data-size="small"
+  data-color="yellow"
+  data-shape="pc"
+  data-support-multiple-densities="true"
+></div>
+
