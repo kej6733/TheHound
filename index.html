@@ -48,3 +48,32 @@
   </body>
 </html>
 
+<a id="channel-chat-button" href="#" onclick="void chatChannel();">
+  <img
+    src="/tool/resource/static/img/button/channel/consult/consult_small_yellow_pc.png"
+  />
+</a>
+<script type="text/javascript">
+  function chatChannel() {
+    Kakao.Channel.chat({
+      channelPublicId: '_xcxbCyb',
+    })
+  }
+</script>
+
+<a id="channel-add-button" href="#" onclick="void addChannel();">
+  <img
+    src="/tool/resource/static/img/button/channel/add/channel_add_small.png"
+    alt="카카오톡 채널 추가 버튼"
+  />
+</a>
+<script type="text/javascript">
+  function addChannel() {
+    Kakao.Channel.addChannel({
+      channelPublicId: '_xcxbCyb',
+    })
+  }
+</script>
+
+
+
