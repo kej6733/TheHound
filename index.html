@@ -41,6 +41,15 @@
       ],
     })
   }
+  Kakao.Channel.createAddChannelButton({
+  container: '#kakao-add-channel-button',
+  channelPublicId: '_xcxbCyb' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+});
+  
+  Kakao.Channel.createChatButton({
+  container: '#kakao-talk-channel-chat-button',
+  channelPublicId: '_xcxbCyb' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+});
   
 </script>
 <!-- https://hwadamrealestate.modoo.at -->
