@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('d293e7c48ee957d8481d52abb52d84f1');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '더 하운드 반달섬',
+        description: '설문 이벤트 참여하고 상품받아가자',
+        imageUrl:
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5839%2F2022%2F06%2F03%2F0000014263_001_20220603082803784.jpg&type=a340',
+        link: {
+          mobileWebUrl: 'https://hwadamrealestate.modoo.at',
+          webUrl: 'https://hwadamrealestate.modoo.at',
+        },
+      },
+      social: {
+        likeCount: 1242, //99999가 최대입니다
+        commentCount: 416, //99999가 최대입니다
+        sharedCount: 2711, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '지금바로 공식홈페이지 가기',
+          link: {
+            mobileWebUrl: 'https://hwadamrealestate.modoo.at',
+            webUrl: 'https://hwadamrealestate.modoo.at',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- https://hwadamrealestate.modoo.at -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
